@@ -1,0 +1,33 @@
+                    MINI OPERATING SYSTEM
+                         SIMULATOR
+                              |
+        +---------------------+---------------------+
+        |                     |                     |
+   PROCESS MANAGEMENT    CPU SCHEDULING      MEMORY MANAGEMENT
+        |                     |                     |
+   Process Creation       FCFS / SJF          First Fit
+   Process States         SRTF                 Best Fit
+   PCB                    Priority              Worst Fit
+   fork/exec/wait         Round Robin           Paging
+        |                     |                     |
+        +---------------------+---------------------+
+                              |
+                    PAGE REPLACEMENT
+                              |
+                    FIFO / LRU / Optimal
+                              |
+        +---------------------+---------------------+
+        |                                           |
+ SYNCHRONIZATION                              DEADLOCK
+        |                                           |
+ Mutex / Semaphore                         Detection
+ Producer-Consumer                         Banker's Algorithm
+        |                                           |
+        +---------------------+---------------------+
+                              |
+                       FILE MANAGEMENT
+                              |
+                 Create / Read / Write / Delete
+                              |
+                              v
+                     FINAL OS SIMULATOR
