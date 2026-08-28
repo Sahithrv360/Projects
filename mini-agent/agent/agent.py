@@ -8,15 +8,11 @@ class Agent:
 
     def run(self, user_input):
 
-        messages = [
-            {
-                "role": "system",
-                "content": "You are Mini Agent, a helpful AI assistant."
-            },
-            {
-                "role": "user",
-                "content": user_input
-            }
-        ]
+        prompt = f"""
+You are Mini Agent, a helpful AI assistant.
 
-        return self.llm.generate(messages)
+User:
+{user_input}
+"""
+
+        return self.llm.generate(prompt)

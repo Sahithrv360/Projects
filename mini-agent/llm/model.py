@@ -1,19 +1,21 @@
-from openai import OpenAI
-from config.config import OPENAI_API_KEY
+from google import genai
+from config.config import GEMINI_API_KEY
 
 
 class LLM:
 
     def __init__(self):
-        self.client = OpenAI(
-            api_key=OPENAI_API_KEY
+        self.client = genai.Client(
+            api_key=GEMINI_API_KEY
         )
 
-    def generate(self, messages):
+        self.model = "gemini-2.5-flash"
 
-        response = self.client.responses.create(
-            model="gpt-5-mini",
-            input=messages
+    def generate(self, prompt):
+
+        response = self.client.models.generate_content(
+            model=self.model,
+            contents=prompt
         )
 
-        return response.output_text
+        return response.text
