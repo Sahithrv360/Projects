@@ -9,13 +9,13 @@ class LLM:
             api_key=GEMINI_API_KEY
         )
 
-        self.model = "gemini-2.5-flash"
+        self.model = "gemini-3.6-flash"
 
     def generate(self, prompt):
 
-        response = self.client.models.generate_content(
+        interaction = self.client.interactions.create(
             model=self.model,
-            contents=prompt
+            input=prompt
         )
 
-        return response.text
+        return interaction.output_text
