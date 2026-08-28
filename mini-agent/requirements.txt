@@ -1,2 +1,2 @@
-openaigoogle-genai
+google-genai
 python-dotenv
